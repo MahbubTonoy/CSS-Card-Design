@@ -1,0 +1,128 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  background:rgba(21, 172, 169, 0.4);
+}
+.heading {
+  text-align: center;
+  margin: 5px;
+}
+.heading h1 {
+  padding-top: 30px;
+  font-weight: 600;
+}
+.heading h2 {
+  font-weight: 400;
+  font-size: 25px;
+}
+.heading span {
+  font-weight: 400;
+}
+.card_container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.card_holder {
+  width: 33%;
+  float: left;
+  margin: 50px 0;
+}
+.card {
+  position: relative;
+  margin: 0 auto;
+  height: 375px;
+  width: 300px;
+  transform-style: preserve-3d;
+  transition: 0.3s all linear;
+}
+.card_holder:hover .card{
+  transform: rotateY(180deg);
+}
+.card_front, .card_back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #eee;
+  margin: 0 auto;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+.card_heading {
+  width: 100%;
+  height: 50px;
+  background: #9c88ff;
+  color: #fff;
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+}
+.card_image {
+  height: 90px;
+  text-align: center;
+  padding: 10px;
+}
+.card_image img {
+  height: 100%;
+}
+.card_back {
+  transform: rotateY(180deg);
+}
+.card_back p , .card_body {
+  margin: 10px;
+}
+.card_footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #9c88ff;
+  color: #fff;
+  border-radius: 0 0 5px 5px;
+}
+.card_back button {
+  display: block;
+  margin: 15px auto;
+  color: #fff;
+  background: #9c88ff;
+  border-radius: 3px;
+  border: 0;
+  padding: 7px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.desclaimer {
+  clear: both;
+  max-width: 1200px;
+  margin: 10px auto;
+  font-size: 18px;
+}
+.desclaimer a {
+  text-decoration: none;
+  color: #00608d;
+}
+.footer {
+  background: #202020;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+.footer a {
+  color: #fff;
+}
+@media only screen and (max-width:900px) {
+  .card_holder {
+    width: 100%;
+  }
+}
